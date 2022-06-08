@@ -1,0 +1,17 @@
+- NUMERO CLASSI = 20 
+
+- override di nn.Module con def forward 
+FORWARD - nn.Module definisce the computatiion performed at every call 
+SHould be overided by each class 
+
+Metodo CUDA = moves all model parameters and buffers to the GPU 
+
+D classifier -> ereditata da Module e aggiunge caratteristiche 
+
+
+DOMAIN CLASSIFIER TARGET:
+1. Ereditare da nn.Module _Loss 
+2. batch_size = input.size(0) # estrae la prima dimensione, ovvero la LUNGHEZZA del tensore 
+3. prob = F.softmax(input, dim=1) # with dim=1 la softmax viene applicata per COLONNA ? 
+4. in cuda use non_blocking instead of asyncr = True
+5. tensor.sum(dim = 1) per la probabilità in uscita da softmax 
