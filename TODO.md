@@ -1,0 +1,1 @@
+- [ ] Cella con check versione Python richiesta

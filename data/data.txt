@@ -1,0 +1,4 @@
+Adaptiope folder contains 2 subfolders:
+
+    - product_images: source domain
+    - real_life: target domain 
