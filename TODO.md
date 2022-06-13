@@ -2,3 +2,4 @@
 - [ ] Creare sistema gestione checkpoints in training
 - [ ] Provare a testare anche su Office-31
 - [ ] Correggere notebook: distingui task- vs domain- classifiers
+- [ ] Correggere data_prep normalization values
