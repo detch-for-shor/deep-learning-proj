@@ -3,3 +3,5 @@
 - [ ] Provare a testare anche su Office-31
 - [ ] Correggere data_prep normalization values
 - [ ] Motivare scelta threshold
+- [ ] write RESET method?
+    
