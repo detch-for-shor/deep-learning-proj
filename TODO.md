@@ -1,7 +1,0 @@
-- [ ] Cella con check versione Python richiesta
-- [ ] Creare sistema gestione checkpoints in training
-- [ ] Provare a testare anche su Office-31
-- [ ] Correggere data_prep normalization values
-- [ ] Motivare scelta threshold
-- [ ] write RESET method?
-    
