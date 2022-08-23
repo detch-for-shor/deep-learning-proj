@@ -16,77 +16,45 @@ The project can be run either locally with [Python](https://www.python.org/) ins
 
 ## Run the project locally 
 
-### Clone the repository in a local machine
-
-Clone this repository in a local directory typing in the command line: 
+1. Clone the repository in a local machine typing in the command line: 
 
 ```
 git clone https://github.com/detch-for-shor/deep-learning-proj.git
-```
-
-### Environment 
-The creation of a virtual environment is highly suggested. If not already installed, install virtualenv:
-
-- in Unix systems:
-    ```
-    python3 -m pip install --user virtualenv
-    ```
-
-- in Windows systems:
-    ```
-    python -m pip install --user virtualenv
-    ```
-
-And then create the virtual environment named *venv* typing in the command line (inside the project folder): 
-
-- in Unix systems:
-    ```
-    python3 -m venv venv
-    ```
-
-- in Windows systems:
-    ```
-    python -m venv venv
-    ```
-
-The virtual environment can be activated as follow: 
-
-- in Unix systems:
-    ```
-    source venv/bin/activate
-    ```
-
-- in Windows systems:
-    ```
-    venv\Scripts\activate
-    ```
-### Requirements 
-
-In the active virtual environment, install all libraries contained in the `requirements.txt` file:
 
 ```
-pip install -r requirements.txt
+
+2. Create a virtual environment to easily import the libraries  
+
+3. Load Adaptiope dataset and save it within the same folder of the project. Add the following code to unzip it:
+
 ```
+with zipfile.ZipFile("data/Adaptiope.zip", 'r') as zip_f:
+    namelist = zip_f.namelist() 
+    images = [x for x in namelist if x.endswith(".jpg")]
+    filter = [f"Adaptiope/{y}/{x}/" for y in domains for x in classes]
+    cl_images = [x for x in images if x.startswith(tuple(filter))]
+    zip_f.extractall(path = "data/", members= cl_images)
+```
+<b>NOTE: </b>Notice that the paths reported in the notebook refer to Google Drive's directories and should be changed. 
+
 ---
 ## Run the project on Google Colab  
 
 ### Clone the repository 
 
-Clone the repository and open it as a notebook in Colab: 
+1. Clone the repository and open it as a notebook in Colab: 
 
 ```
 git clone https://github.com/detch-for-shor/deep-learning-proj.git
 ```
 
-### Prepare the folders 
+2. Add a folder to your Google Drive named <code>DLL_project</code>
 
-1. Add a folder to your Google Drive named <code>DLL_project</code>
+3. Since the original Adaptiope dataset is hosted on Google Drive, add a shortcut in the <code>DLL_project</code> folder. The dataset is available here.
 
-2. Since the original Adaptiope dataset is hosted on Google Drive, add a shortcut in the <code>DLL_project</code> folder. The dataset is available here.
+4. To save the results and, therefore, display the graphs, add a further subfolder named <code>DLL_project/results</code>.
 
-3. To save the results and, therefore, display the graphs, add a further subfolder named <code>DLL_project/results</code>.
-
-4. Upload the notebook with the code in the <code>DLL_project</code> and run it.
+5. Upload the notebook with the code in the <code>DLL_project</code> and run it.
 
 <b>NOTE: </b>Notice that the architecture has been trained in a Google Colab Pro environment due to the high computational power needed, but it runs on the Free Colab too.
 
