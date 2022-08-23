@@ -4,19 +4,15 @@
 The project has been developed as final assignment of the Deep Learning Course course, offered by the University of Trento. 
 
 ## Project objective 
-In this notebook, we tackle the Unsupervised Domain Adaptation (UDA) task on the reduced version of Adaptiope dataset (Ringwald & Stiefelhagen, 2021). This version considers the real world (R) and product (P) domains and narrow down the classes to .
+In this notebook, we tackle the Unsupervised Domain Adaptation (UDA) task on the reduced version of [Adaptiope](https://paperswithcode.com/dataset/adaptiope) dataset (Ringwald & Stiefelhagen, 2021). This version considers the real world (<code>R</code>) and product (<code>P</code>) domains and narrow down the classes to $20$.
 
-Our solution is inspired by the Domain-Symmetric Networks (SymNets), proposed by Zhang et al. (2019), and suggests additional architectural refinements to overcome model overfitting and overconfidence.
+Our solution is inspired by the Domain-Symmetric Networks (SymNets), proposed by [Zhange <i>et al.</i>](https://openaccess.thecvf.com/content_CVPR_2019/html/Zhang_Domain-Symmetric_Networks_for_Adversarial_Domain_Adaptation_CVPR_2019_paper.html) (2019), and suggests additional architectural refinements to overcome model overfitting and overconfidence. 
 
-The deployed version of the architecture outperforms both the external baseline (i.e., from the assignment description) and the internal one, namely the source-only model. However, it is worth noting how the gain's magnitude varies depending on source and target domain definition, meaning the direction of the adaptation.
+The deployed version of the architecture outperforms the internal baseline, the <code>source-only</code> model. However, it is worth noting how the <i>gain</i>'s magnitude varies depending on <code>source</code> and <code>target</code> domain definition, meaning the <i>direction</i> of the adaptation.
 
-## Prerequisites 
+## Run the project 
 
-In order to run this project, the following tools have to be installed on your machine: 
-- Python, preferably [3.9](https://www.python.org/downloads/release/python-390/) 
-
-or: 
-- [Google Colab](https://colab.research.google.com/)
+The project can be run either locally with [Python](https://www.python.org/) installed on your machine or on [Google Colab](https://colab.research.google.com/).
 
 ## Run the project locally 
 
