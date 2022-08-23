@@ -1,6 +1,5 @@
-# Unsupervised Domain Adaptation Task
-## Deep Learning Course Project 
-### University of Trento, A.Y. 2021/22
+<h1 align="center">Unsupervised Domain Adaptation Task</h1>
+<h3 align="center">University of Trento, A.Y. 2021/22</h3>  
 ___
 
 The project has been developed as final assignment of the Deep Learning Course course, offered by the University of Trento. 
