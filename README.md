@@ -27,7 +27,7 @@ or:
 Clone this repository in a local directory typing in the command line: 
 
 ```
-git clone 
+git clone https://github.com/detch-for-shor/deep-learning-proj.git
 ```
 
 ### Environment 
@@ -73,6 +73,7 @@ In the active virtual environment, install all libraries contained in the `requi
 ```
 pip install -r requirements.txt
 ```
+---
 ## Run the project on Google Colab  
 
 ### Clone the repository 
@@ -80,18 +81,18 @@ pip install -r requirements.txt
 Clone the repository and open it as a notebook in Colab: 
 
 ```
-git clone 
+git clone https://github.com/detch-for-shor/deep-learning-proj.git
 ```
 
 ### Prepare the folders 
 
 1. Add a folder to your Google Drive named <code>DLL_project</code>
 
-2. Since the original Adaptiope dataset is hosted on Google Drive, add a shortcut in the DLL_project. The dataset is available here.
+2. Since the original Adaptiope dataset is hosted on Google Drive, add a shortcut in the <code>DLL_project</code> folder. The dataset is available here.
 
 3. To save the results and, therefore, display the graphs, add a further subfolder named <code>DLL_project/results</code>.
 
 4. Upload the notebook with the code in the <code>DLL_project</code> and run it.
 
-5. Notice that the architecture has been trained in a Google Colab Pro environment due to the high computational power needed.
+<b>NOTE: </b>Notice that the architecture has been trained in a Google Colab Pro environment due to the high computational power needed, but it runs on the Free Colab too.
 
