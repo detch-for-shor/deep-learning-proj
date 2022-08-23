@@ -14,7 +14,7 @@ The deployed version of the architecture outperforms the internal baseline, the 
 
 The project can be run either locally with [Python](https://www.python.org/) installed on your machine or on [Google Colab](https://colab.research.google.com/).
 
-## Run the project locally 
+### Run the project locally 
 
 1. Clone the repository in a local machine typing in the command line: 
 
@@ -25,7 +25,9 @@ git clone https://github.com/detch-for-shor/deep-learning-proj.git
 
 2. Create a virtual environment to easily import the libraries  
 
-3. Load Adaptiope dataset and save it within the same folder of the project. Add the following code to unzip it:
+3. Load [Adaptiope](https://paperswithcode.com/dataset/adaptiope) dataset and save it in a subfolder (i.e., <code>./data</code>) within the same folder of the project. 
+
+4. Add the following code to unzip it:
 
 ```
 with zipfile.ZipFile("data/Adaptiope.zip", 'r') as zip_f:
@@ -34,27 +36,31 @@ with zipfile.ZipFile("data/Adaptiope.zip", 'r') as zip_f:
     filter = [f"Adaptiope/{y}/{x}/" for y in domains for x in classes]
     cl_images = [x for x in images if x.startswith(tuple(filter))]
     zip_f.extractall(path = "data/", members= cl_images)
+    
 ```
+
+5. Run the notebook 
+
 <b>NOTE: </b>Notice that the paths reported in the notebook refer to Google Drive's directories and should be changed. 
 
 ---
-## Run the project on Google Colab  
 
-### Clone the repository 
+### Run the project on Google Colab  
 
 1. Clone the repository and open it as a notebook in Colab: 
 
 ```
 git clone https://github.com/detch-for-shor/deep-learning-proj.git
+
 ```
 
 2. Add a folder to your Google Drive named <code>DLL_project</code>
 
-3. Since the original Adaptiope dataset is hosted on Google Drive, add a shortcut in the <code>DLL_project</code> folder. The dataset is available here.
+3. Since the original Adaptiope dataset is hosted on Google Drive, add a [shortcut](https://support.google.com/drive/answer/9700156?hl=en&co=GENIE.Platform%3DDesktop) to the <code>DLL_project</code> folder. The dataset is available [here](https://drive.google.com/file/d/1FmdsvetC0oVyrFJ9ER7fcN-cXPOWx2gq/view).
 
 4. To save the results and, therefore, display the graphs, add a further subfolder named <code>DLL_project/results</code>.
 
-5. Upload the notebook with the code in the <code>DLL_project</code> and run it.
+5. Run the notebook by activating the [GPU](https://www.tutorialspoint.com/google_colab/google_colab_using_free_gpu.htm).
 
-<b>NOTE: </b>Notice that the architecture has been trained in a Google Colab Pro environment due to the high computational power needed, but it runs on the Free Colab too.
+<b>NOTE: </b>Notice that the architecture has been trained in a Google Colab Pro environment due to the high computational power needed, but it can be trained on the Free version of Colab too.
 
